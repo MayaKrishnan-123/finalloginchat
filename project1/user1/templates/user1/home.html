@@ -1,0 +1,27 @@
+{% extends 'user1/base.html' %}
+{% block content %}
+
+<div class="header">
+    <h1>Details of the Users</h1>
+        {% for student in User %}
+    </div>
+    <div class="content">
+
+        <table border="0">
+            <tr>
+                <td> {{ student.username}}</td>
+               <td>{{ student.last_name}}</td>
+                <td>{{ student.first_name}}</td>
+
+            </tr>
+        </table>
+
+        {% endfor %}
+        <a href='../edit/'><button type="submit" >EDIT PROFILE</button></a><br><br>
+        <a href='../chat'><button type="submit">READY TO CHAT</a><br><br>
+        <a href="../logout/">TO LOG OUT</a><br>
+
+    </div>
+
+{% endblock %}
+
